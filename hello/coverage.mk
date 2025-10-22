@@ -8,7 +8,7 @@ export LLVM_PROFILE_FILE
 
 cov: clean-cov
 	cargo test
-	cargo llvm-cov report --html
+	cargo llvm-cov --html
 	cargo llvm-cov report --summary-only --output-path $(COVERAGE_OUTPUT_FILE)
 
 
