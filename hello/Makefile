@@ -1,6 +1,8 @@
-.PHONY: format lint test doc build
+.PHONY: format lint test doc build cov
 
-all: format lint test doc build
+include coverage.mk
+
+all: format lint cov doc
 
 format:
 	cargo fmt --all
