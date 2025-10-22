@@ -71,13 +71,9 @@ Then jump into the container and start building:
 
 ~~~bash
 docker exec -it rust-template sh
-cd scripts
-./build.sh
-cd ../<< project dir >>
-cargo run
+cd hello
+make all
 ~~~
-
-*(I'm tempted to move from build.sh to makefile)*
 
 ## Contributing
 
