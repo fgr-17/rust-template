@@ -9,7 +9,8 @@ ENV SCRIPTS_DIR=./scripts
 RUN apk add --no-cache musl-dev
 RUN apk add make
 
-RUN rustup update && rustup component add clippy rustfmt
+RUN rustup update && rustup component add clippy rustfmt llvm-tools
+RUN cargo install cargo-llvm-cov --locked
 
 # Add ll alias for colored ls -la
 RUN echo "alias ll='ls -la --color=auto'" > /etc/ash_aliases

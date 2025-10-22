@@ -1,5 +1,5 @@
 #!/bin/sh
 cd ${PROJDIR}
 cargo add --dev mockall
-cargo install cargo-alias
+cargo install cargo-llvm-cov
 exec "$@"
