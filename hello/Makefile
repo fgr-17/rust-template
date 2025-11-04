@@ -2,13 +2,18 @@
 
 include coverage.mk
 
-all: format lint cov doc
+all: clean format lint test cov doc
+
+clean: cclean
 
 format:
 	cargo fmt --all
 
 lint:
 	cargo clippy -- -D warnings
+
+cclean:
+	cargo clean
 
 test:
 	cargo test
