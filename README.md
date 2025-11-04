@@ -70,7 +70,7 @@ docker compose up -d
 Then jump into the container and start building:
 
 ~~~bash
-docker exec -it rust-template sh
+docker exec -it rust-template bash
 cd hello
 make all
 ~~~
